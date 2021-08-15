@@ -1,4 +1,5 @@
 import { CsvFileReader } from "./CsvFileReader";
+import { matchResults } from "./MatchResults";
 
 const matches = new CsvFileReader("soccer.csv");
 matches.read();
@@ -9,14 +10,6 @@ matches.read();
 //     Draw: "D"
 // }
 
-// Use enum (enumeration)
-// Collection of closely related values
-// Fixed set and small set of values
-enum matchResults {
-    HomeWin = "H",
-    AwayWin = "A",
-    Draw = "D"
-}
 
 let manUnitedWins = 0;
 
