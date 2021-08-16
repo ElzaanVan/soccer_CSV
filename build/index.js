@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var CsvFileReader_1 = require("./CsvFileReader");
+var MatchResults_1 = require("./MatchResults");
 var matches = new CsvFileReader_1.CsvFileReader("soccer.csv");
 matches.read();
 // const matchResults = {
@@ -8,23 +9,15 @@ matches.read();
 //     AwayWin: "A",
 //     Draw: "D"
 // }
-// Use enum (enumeration)
-// Collection of closely related values
-// Fixed set and small set of values
-var matchResults;
-(function (matchResults) {
-    matchResults["HomeWin"] = "H";
-    matchResults["AwayWin"] = "A";
-    matchResults["Draw"] = "D";
-})(matchResults || (matchResults = {}));
 var manUnitedWins = 0;
 for (var _i = 0, _a = matches.data; _i < _a.length; _i++) {
     var match = _a[_i];
-    if (match[1] === "Man United" && match[5] === matchResults.HomeWin) {
+    if (match[1] === "Man United" && match[5] === MatchResults_1.matchResults.HomeWin) {
         manUnitedWins++;
     }
-    else if (match[2] === "Man United" && match[5] === matchResults.AwayWin) {
+    else if (match[2] === "Man United" && match[5] === MatchResults_1.matchResults.AwayWin) {
         manUnitedWins++;
     }
 }
-console.log("Machester United Won " + manUnitedWins + " games.");
+// console.log(`Machester United Won ${manUnitedWins} games.`);
+// console.log(matches.data[1][1]);

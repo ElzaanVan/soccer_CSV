@@ -21,4 +21,6 @@ for (let match of matches.data) {
     }
 }
 
-console.log(`Machester United Won ${manUnitedWins} games.`);
+// console.log(`Machester United Won ${manUnitedWins} games.`);
+// console.log(matches.data[1][1]);
+
