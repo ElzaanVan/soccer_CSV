@@ -4,11 +4,6 @@ var CsvFileReader_1 = require("./CsvFileReader");
 var MatchResults_1 = require("./MatchResults");
 var matches = new CsvFileReader_1.CsvFileReader("soccer.csv");
 matches.read();
-// const matchResults = {
-//     HomeWin: "H",
-//     AwayWin: "A",
-//     Draw: "D"
-// }
 var manUnitedWins = 0;
 for (var _i = 0, _a = matches.data; _i < _a.length; _i++) {
     var match = _a[_i];
@@ -19,5 +14,4 @@ for (var _i = 0, _a = matches.data; _i < _a.length; _i++) {
         manUnitedWins++;
     }
 }
-// console.log(`Machester United Won ${manUnitedWins} games.`);
-// console.log(matches.data[1][1]);
+console.log("Manchester United won " + manUnitedWins + " games.");
